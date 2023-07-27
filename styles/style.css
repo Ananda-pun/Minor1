@@ -1,0 +1,429 @@
+	  *{
+	   	  box-sizing: border-box;
+	      margin: 0;
+	      padding: 0;
+	    }
+
+		/* for header */
+		#header
+		{
+			width: 100%;
+			height: 100px;
+			background-color: #faf0ca;
+			display: flex;
+    		flex-direction: row;
+			justify-content: space-between;
+		}
+		
+		 .logo{
+			width: 33.33%;
+			height: 100px;
+		}
+		
+
+/*			Question hub content*/
+.content > p{
+	width: 33.33%;
+	height: 100px;
+	font-family:cursive;
+	color: black;
+	font-size: 45px;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+	
+
+	.header3{
+		width: 33.33%;
+		height: 100px;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		padding: 10px 10px;
+		align-content: space-around;
+	}
+		
+		/*         for search box*/
+		.search input[type=text]{
+        width:200px;
+        height:30px;
+        border-radius:0px;
+        border: none;
+
+    	}
+
+    	.login{
+    		align-content: center;
+    		height: 40px;
+    	}
+         
+
+         
+    	.search button{
+        background-color: white;
+        color: black;
+        float: right;
+        padding: 5px 10px;
+        margin-right: 0px;
+        font-size: 12px;
+        border: none;
+        cursor: pointer;
+        height: 30px;
+
+
+    	}
+
+		.loginbutton{ 
+			margin-left: 400px;
+			 height: 30px;
+			width: 100px;
+			border-radius: 10px;
+			background-color:#FDC921;
+
+		}
+		.loginbutton:hover{
+			cursor: pointer;
+			background-color: white;
+		} 
+		
+		/*for navigation*/
+
+		#nav
+		{
+			display: flex;
+			flex-wrap: wrap;
+			height: 40px;
+			background-color:#FDC921;
+			text-align: center;
+			position: sticky;
+			top:0;
+			width: 100%;
+		}
+		#nav ul
+		{
+			margin: 0;
+		}
+		li 
+		{
+			 display: inline-block;
+			 /* margin-right: 20px; */
+			 float: none;
+			 border-right: 1px solid #bbb;
+		}
+		.navlink 
+		{
+		  display: block;
+		  padding: 10px;
+		  text-decoration: none;
+		  color: #333;
+		}
+		.navlink:hover 
+		{
+		  background-color: #5F9EA0;
+		  color: #fff;
+		  height: 40px;
+		}
+		
+		/* header finish */
+
+
+
+		/* Footer  */
+		#footer
+		{
+			width: 100%;
+			height: 200px;
+			background-color: #FDC921;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+		}
+		.foot1
+		{
+			width: 30%;
+			height: 200px;
+			background-color:#faf0ca;
+			float: left;
+/*			background-image: url("book3.jpg");*/
+			border-bottom-right-radius:100% ;
+			filter: brightness(0.9);
+
+		}
+		.footimg{
+			height: 110px;
+			width: 110px;
+		}
+		.footmiddle{
+			display: flex;
+			align-items: flex-end;
+			justify-content: center;
+		}
+		.footmiddle-content{
+			font-size: 20px;
+		}
+		.foot2
+		{
+			text-align: center;
+			width: 30%;
+			background-color: #FDC921;
+			float: left;
+			height: 200px;
+		}
+		
+		
+
+		.social-icons a {
+  			color: #777;
+  			font-size: 24px;
+		}
+		.abtus{
+			font-size: 19px;
+			color: black;
+			text-decoration: none;
+		}
+		.abtus:hover{
+			color: yellow;
+		}
+		/*  footer finish */
+
+
+
+		/* landing page */
+		#maintop
+		{
+			width: 100%;
+			height: 500px;
+			background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(../images/book.jpg);
+			background-size: 100% 500px;
+			background-repeat: no-repeat;
+		}
+		
+		
+		.content1
+		{
+			font-family:serif;
+			color: #FDC921;
+			font-size: 40px;
+			display: flex;
+			align-items: center;
+			align-content: center;
+			justify-content: center;
+			padding-top: 200px;
+			text-shadow: 1.5px 1.5px black;
+		}
+		#mainbottom 
+		{
+			  display: flex;
+			  align-items: center;
+			  display: block;
+			  justify-content: center;
+			  /* margin-top: 10px; */
+			  width: 100%;
+			  height: 800px;
+			  background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("../images/bookbottom.jpg");
+			  background-color:#FFFDF7;
+
+		}
+		.intro 
+		{
+		  text-align: center;
+		  font-family: monospace;
+		  color: white;
+		  font-size: 25px;
+		  text-shadow: 2px 2px black;
+		  width: 100%;
+		  padding-top: 100px;
+
+		}
+		.intro1
+		{	
+		  font-family: monospace;
+		 color: white;
+		  font-size: 25px;
+		  text-shadow: 2px 2px black;
+		  width: 100%;
+		  padding-top: 100px;
+		  margin-top: 150px;
+		  padding: 30px;
+
+		}
+		.intro2
+		{	
+		 font-family: monospace;
+		  color: black;
+		  font-size: 25px;
+		  text-shadow: 1px 1px black;
+		}
+		
+		#left2
+		{
+			/* margin-top: 10px; */
+			width: 50%;
+			height: 350px;
+			filter: brightness(0.8);
+			padding: 30px;
+			float: left;
+			background-color: aliceblue;
+
+		}
+		#right2
+		{
+			/* ---- */
+			width: 50%;
+			height: 350px;
+			background-image:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url("../images/book pen.jpg");
+			background-repeat: no-repeat;
+			background-size: 100%;
+			float: left;
+		}
+
+		/* landing page finish */
+
+		/* login  */
+		.labellog {
+			display: block;
+			margin-bottom: 10px;
+		}
+
+		.inputlog {
+			width: 100%;
+			padding: 8px;
+			margin-bottom: 15px;
+			background-color: rgb(240, 236, 236);
+			border-radius: 20px;
+		}
+
+		.formlog {
+			max-width: 400px;
+			margin: 0 auto;
+			position: absolute;
+			top: 25%;
+			left: 35%;
+		}
+
+		.logbutton {
+			width: 49%;
+			height: 50px;
+		}
+
+		.logbutton:hover {
+			cursor: pointer;
+			background-color: rgb(63, 189, 122);
+
+		}
+
+		.formh4 {
+			color: rgb(112, 109, 109);
+		}
+		/* login finish */
+
+		/* for register */
+		.formreg{
+			max-width: 400px;
+			margin: 0 auto;
+			position: absolute;
+			top: 25%;
+			left: 35%;
+		}
+		#registerform{
+			width: 400px;
+			height: 500px;
+			background-color: #9fa1dd;
+		}
+		#register{
+			border: solid blue 2px;
+			width: 400px;
+			border-radius: 10px;
+		}
+
+		
+
+		/*		ABOUT US CSS*/
+		
+		#aboutmain 
+        {
+            background-color: #faf0ca;
+            width: 100%;
+            height: 500px;
+			padding-left: 50px;
+            
+			
+
+        }
+        #abouttop
+        {
+            width: 100%;
+            height: 100px;
+            padding: 10px;
+        }
+        #aboutfirst
+        {
+            height: 200px;
+            width: 50%;
+            float: left;
+            padding: 15px 10px;
+        }
+        #aboutsecond
+        {
+            height: 200px;
+            width: 50%;
+            float: left;
+            padding: 15px 10px;
+        }
+        #aboutthird
+        {
+            height: 200px;
+            width: 100%;
+            float: left;
+            padding:10px;
+        }
+
+		/* about us finish */
+
+
+
+		/* FOR TIPS PAGE */
+		.maintips {
+            width: 100%;
+            height: 80vh; 
+            display: flex;   
+        }
+        .sidemenu {
+            width: 200px;
+            background-color: #faf0ca;
+            padding-top: 20px;
+        }
+        .sidemenu a {
+            padding: 6px 6px 6px 2px;
+            text-decoration: none;
+            font-size: 2rem;
+            color: #818181;
+            display: block;
+        }
+        
+        .sidemenu a:hover {
+            color: #f1f1f1;
+        }
+        .maincon {
+            background-color: #faf0ca;
+            font-size: 1.2rem;
+            height: 100%;
+            padding: 30px;
+            width: 85%;
+            
+        }
+        @media screen and (max-height: 1400px) {
+            .sidemenu {
+                width: 15%px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .sidemenu a {
+                width: 50%;
+                padding: 12px 6px;
+                text-align: center;
+            }
+        }
+		/* tips finish */
