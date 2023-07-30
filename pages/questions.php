@@ -1,4 +1,5 @@
-<?php 
+<?php
+    include('../include/dbconnection.php');
     include('../include/header.php');
     include('../include/nav.php');
 
@@ -9,40 +10,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        .faculty{
-            width: 350px;
-            height: 400px;
-            background-color: lightblue;
-            justify-content: space-between;
-
-        }
-        .faculties{
-            
-           width: 100%;
-           height: 50px;
-           
-           
-        }
-    </style>
+    <title>Questions</title>
+    
 </head>
 <body>
-    <div class="pufaculties">
-        <div class="faculty">
-            <div class="faculties">
-                <h4 class =""> <a href="">facluty of management studies</a>   </h4>
-            </div>
-            <div class="faculties">
-                <h4 class =""> <a href="">facluty of science and technology</a>   </h4>
-            </div>
-            <div class="faculties">
-                <h4 class =""> <a href="">facluty of health sciences</a>   </h4>
-            </div>
-            <div class="faculties">
-                <h4 class =""> <a href="">facluty of humanities and social science</a>   </h4>
-            </div>
-        </div>
+    <!-- showing the faculties -->
+    <div class="faculties">
+        <ol>
+            <?php
+            // displaying the available faculties
+
+                $sql = "SELECT * FROM faculties";
+                $result = $conn -> query($sql);
+
+                $count=1;
+                if($result){
+                    while($row = $result->fetch_assoc()){
+                        echo "<li>" . $row['faculty_name'] . "</li>"."<br>";
+                    }
+                }
+            ?>
+        </ol>
+    </div>
+
+    <!-- showing the programs for the clicked faculty -->
+    <div class="programs">
+        <ul>
+
+        </ul>
     </div>
 </body>
 </html>

@@ -12,11 +12,11 @@
     
 </head>
 <body>
-    <?php 
+    <?php  
         include('../include/headerLogout.php');
     ?>
    <div class="add-questions">
-       <form action="addaction.php" method="POST">
+       <form action="addaction.php" method="POST" enctype = "multipart/form-data">
             <!-- Faculty dropdown -->
             <div class="faculties">
                 <lable>Faculty</lable>
@@ -64,21 +64,47 @@
             <div class="courses">
                 <label>Course</lable>
                 <select name="course" id="course">
-                    <option value="">select course</option>
+                    <option value="">--select course--</option>
                 </select>
             </div>
 
             <!-- year dropdown -->
             <div class="years">
                 <label for="year"> Year</label>
-                <select name="year" id="year" class ="year">
-                    <option value="">--select year--</option>
-                </select>
+                <select name="year" id="year"></select>
+                
+                <script type="text/javascript">
+                    window.onload = function (){
+
+                        var givenYear = document.getElementById('year').value;
+                        var currnetYear= (new Date()).getFullYear();
+
+                        for (var i = 2015; i <= currnetYear; i++) {
+                            var option= document.createElement("OPTION");
+                            option.innerHTML = i;
+                            option.value = i;
+                            year.appendChild(option);
+                        }
+                    }
+
+                </script>
+                
+            </div>
+
+            <div class="file">
+                
+                    <label for="">set</label>
+                    <input type="file" name= "myfile" class ="">
+                
+
+                
             </div>
 
             <button type = "submit" name= "add" id="add" class="add">ADD</button>
         </form>
    </div>
+
+   
 
     
         

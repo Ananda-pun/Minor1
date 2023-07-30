@@ -42,6 +42,16 @@ $(document).ready(function(){
             
         } 
     });
+    
 });
+
+// function getyear(){
+//     var year = parseInt(document.getElementById("year").value);
+//     if (year.length !== 4 ) {
+//         alert("Please enter a valid 4-digit year.");
+//         return false;
+//     }
+
+// }
          
   
