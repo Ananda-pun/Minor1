@@ -20,13 +20,27 @@
 			<img src="<?php echo IMG_URL."logofinal.png" ?>" class="footimg">
 		</div>
 		<div class="footmiddle">
-			<div class="footmiddle-content"><i class="fas fa-copyright"></i>2023 QHUB.All rights reserved</p></div>
+			<div class="footform">
+			<form>
+				Name:<br>
+				<input type="text" name=""><br>
+				Email:<br>
+				<input type="email" name=""><br>
+				Suggestions:<br>
+				<textarea name="message" cols="32" rows="10"></textarea><br>
+				<input type="submit" class="submit" name="submit" value="Submit">
+			
+			</form>	
+			</div>	
+			<div class="footmiddle-content"><i class="fas fa-copyright"></i>2023 QHUB.All rights reserved</p>
+			
+			</div>
 			
 		</div>
 		<div class="foot2">
 			<p>Contact us</p>
 			<p><i class="fas fa-phone"></i> +977-4268691</p>
-			<p><i class="fas fa-envelope"></i> questionhubnp@gmail.com </p><br/>
+			<p><i class="fas fa-envelope"></i> questionhubnp@gmail.com </p><br/><br>
 			<p>Social Links</p>
 			<p class="social-icons">
 				<a href="#"><i class="fab fa-facebook"></i></a>&nbsp;
