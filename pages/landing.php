@@ -50,9 +50,9 @@
 				
 			</div>
 		</div>
-		<div id="right2">
+		<!-- <div id="right2">
 			
-		</div>
+		</div> -->
 	</div>
 
 	<?php 

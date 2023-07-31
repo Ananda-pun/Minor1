@@ -1,7 +1,7 @@
 <?php
 // session_start();
 
-define('ROOT_FOLDER', '/project/');
+define('ROOT_FOLDER', '/Minor1/');
 
 define('CSS_URL', ROOT_FOLDER.'styles/');
 define('INC_URL', ROOT_FOLDER.'include/');
