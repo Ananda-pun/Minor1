@@ -4,11 +4,11 @@
 
 
     if(!isset($_SESSION['username'])){
-        header("Location: login.php");
+        header("Location: ../login.php");
     }
 
     if($_SESSION['role_name']!="Admin"){
-        header("Location: landing.php");
+        header("Location: ../pages/landing.php");
     }
 
     // Echo "Welcome to Admin DashBoard,".$_SESSION['username'];
@@ -21,6 +21,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        #button{
+            height: 150px;
+            width: 70%;
+            text-align: center;
+            display: flex;
+            flex-direction: row;
+            margin: auto;
+            padding: 10px;
+        }
+        .buttons{
+            height: 50px;
+            width: 100px;
+            background-color: green;
+        }
+    </style>
     
    
 </head>
@@ -29,18 +45,18 @@
         include('../constant.php');
         include('../include/headerLogout.php');
     ?>
-    <!--Adding icons  -->
-    <div>
-        <div class="question">
-            <a href=""><button>Question</button></a>
+    <!--Adding Buttons  -->
+    <div id="button">
+        <div class="buttton">
+            <a href=""><button class="buttons">Manage Question</button></a>
         </div>
-        <div class="syllabus">
-            <a href=""><button> Syllabus</button></a>
+        
+        <div class="button">
+            <a href=""><button class ="buttons">Manage users</button></a>
         </div>
-        <div class="user">
-            <a href=""><button>users</button></a>
+    </div>
 
-        </div>
+    <div>
         <table style="border: 2px solid black;">
             <tr>
                 <th>S.N</th>

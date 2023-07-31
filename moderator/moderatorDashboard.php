@@ -27,40 +27,10 @@
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<style type="text/css">
-		.searchmod {
-			text-align: center;
-			width: 100%;
-			height: 60px;
-			border-radius: 0px;
-			border: none;
-			margin-top: 20px;
-		}
+		
 
-		.searchmd {
-			width: 300px;
-			height: 30px;
-			padding: 0px;
-		}
 
-		.searchmd input[type="text"] {
-			display: inline-block;
-			vertical-align: middle;
-		}
-
-		.searchmod button {
-			background-color: black;
-			color: black;
-			font-size: 12px;
-			border: none;
-			cursor: pointer;
-			height: 30px;
-			width: 30px;
-			padding: 0px;
-			display: inline-block;
-			vertical-align: middle;
-			margin-left: -5px;
-		}
-
+		
 		.button{
 			height: 100px;
 			width: 100px;
@@ -76,40 +46,25 @@
 	</style>
 </head>
 <body>
-	  <?php 
+	<?php 
 	  	
 	 	include('../include/headerLogout.php'); 
-	  ?>      
-        <div class="main">
-        	<div class ="searchmod">
-            	
-				<form action="../pages/searchHandle.php">
-            
-                    <input type="text" class="searchmd" placeholder=" Search " name="search">
-            
-                    <a href="">
-						<button  type = "submit" name="searchSubmit">
-							<i class="fa fa-search" style="font-size: 18px;"></i>
-						</button>
-					</a>
-                            
-                </form>
-            </div>
+	?>      
+    <div class="main">
 			
-			<div class="admincontent">
-				<div class="buttonmoderator">
-					
-					<a href="addquestions.php"><button class="button" name="question">Add Questions</button></a>
-					<button class="button" name="question">Delete Questions</button>
-					<button class="button" name="question">View Questions</button>
-				</div>
-
-				
-				
-        		
-			</div>
+		
+		
+		
+		<div class="buttonmoderator">
 			
+			<a href="addquestions.php"><button class="button" name="question">Add Questions</button></a>
+			<button class="button" name="question">View Questions</button>
 		</div>
+			
+		
+		
+		
+	</div>
 		
 
 </body>
