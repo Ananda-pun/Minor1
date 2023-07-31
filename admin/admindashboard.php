@@ -36,6 +36,10 @@
             width: 100px;
             background-color: green;
         }
+        table{
+            background-color:light green;
+            
+        }
     </style>
     
    
