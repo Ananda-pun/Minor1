@@ -1,6 +1,6 @@
 <?php
     session_start();
-    include ('C:\xampp\htdocs\project\include\dbconnection.php');
+    include ('../include/dbconnection.php');
 	
 
     include('../constant.php');

@@ -19,7 +19,7 @@
        <form action="addaction.php" method="POST" enctype = "multipart/form-data">
             <!-- Faculty dropdown -->
             <div class="faculties">
-                <lable>Faculty</lable>
+                <label class="label">Faculty</label class="label">
                 <select name="faculty" id="faculty" class="faculty">
                     <option value="">--select faculty--</option>
                     <?php
@@ -37,7 +37,7 @@
             </div> 
             <!--program dropdown-->
             <div class="programs">
-                <lable>Program</lable>
+                <label class="label">Program</label class="label">
                 <select name="program" id="program" >
                     <option value="">--select program--</option>
                 </select> <br>
@@ -46,7 +46,7 @@
 
             <!-- semester-->
             <div class="semesters">
-                <lable>Semester</lable>
+                <label class="label">Semester</label class="label">
                 <select name="semester" id="semester">
                     <option value="">--select semester--</option>
                     <option value="1">First semester</option>
@@ -62,7 +62,7 @@
 
             <!-- course-->
             <div class="courses">
-                <label>Course</lable>
+                <label class="label">Course</label class="label">
                 <select name="course" id="course">
                     <option value="">--select course--</option>
                 </select>
@@ -70,7 +70,7 @@
 
             <!-- year dropdown -->
             <div class="years">
-                <label for="year"> Year</label>
+                <label class="label" for="year"> Year</label class="label">
                 <select name="year" id="year"></select>
                 
                 <script type="text/javascript">
@@ -93,7 +93,7 @@
 
             <div class="file">
                 
-                    <label for="">set</label>
+                    <label class="label" for="">set</label class="label">
                     <input type="file" name= "myfile" class ="">
                 
 
