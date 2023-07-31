@@ -88,7 +88,7 @@ if(isset($_POST['login'])){
     }
     if($row['role_name']=="User"){
 
-        header("Location: landing.php");
+        header("Location: pages/landing.php");
     }
     
 }

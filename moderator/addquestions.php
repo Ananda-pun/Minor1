@@ -12,14 +12,14 @@
     
 </head>
 <body>
-    <?php 
+    <?php  
         include('../include/headerLogout.php');
     ?>
    <div class="add-questions">
-       <form action="addaction.php" method="POST">
+       <form action="addaction.php" method="POST" enctype = "multipart/form-data">
             <!-- Faculty dropdown -->
             <div class="faculties">
-                <lable>Faculty</lable>
+                <label class="label">Faculty</label class="label">
                 <select name="faculty" id="faculty" class="faculty">
                     <option value="">--select faculty--</option>
                     <?php
@@ -37,7 +37,7 @@
             </div> 
             <!--program dropdown-->
             <div class="programs">
-                <lable>Program</lable>
+                <label class="label">Program</label class="label">
                 <select name="program" id="program" >
                     <option value="">--select program--</option>
                 </select> <br>
@@ -46,7 +46,7 @@
 
             <!-- semester-->
             <div class="semesters">
-                <lable>Semester</lable>
+                <label class="label">Semester</label class="label">
                 <select name="semester" id="semester">
                     <option value="">--select semester--</option>
                     <option value="1">First semester</option>
@@ -62,23 +62,49 @@
 
             <!-- course-->
             <div class="courses">
-                <label>Course</lable>
+                <label class="label">Course</label class="label">
                 <select name="course" id="course">
-                    <option value="">select course</option>
+                    <option value="">--select course--</option>
                 </select>
             </div>
 
             <!-- year dropdown -->
             <div class="years">
-                <label for="year"> Year</label>
-                <select name="year" id="year" class ="year">
-                    <option value="">--select year--</option>
-                </select>
+                <label class="label" for="year"> Year</label class="label">
+                <select name="year" id="year"></select>
+                
+                <script type="text/javascript">
+                    window.onload = function (){
+
+                        var givenYear = document.getElementById('year').value;
+                        var currnetYear= (new Date()).getFullYear();
+
+                        for (var i = 2015; i <= currnetYear; i++) {
+                            var option= document.createElement("OPTION");
+                            option.innerHTML = i;
+                            option.value = i;
+                            year.appendChild(option);
+                        }
+                    }
+
+                </script>
+                
+            </div>
+
+            <div class="file">
+                
+                    <label class="label" for="">set</label class="label">
+                    <input type="file" name= "myfile" class ="">
+                
+
+                
             </div>
 
             <button type = "submit" name= "add" id="add" class="add">ADD</button>
         </form>
    </div>
+
+   
 
     
         
