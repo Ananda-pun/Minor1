@@ -29,13 +29,8 @@
        <form action="addaction.php" method="POST" enctype = "multipart/form-data">
             <!-- Faculty dropdown -->
             <div class="faculties">
-<<<<<<< HEAD
                 <label class = "label">Faculty</label>
                 <select class = "add-select" name="faculty" id="faculty" class="faculty">
-=======
-                <label class="label">Faculty</label class="label">
-                <select name="faculty" id="faculty" class="faculty">
->>>>>>> b4db66496c6498ae6f23cf22d146b2fa666fafff
                     <option value="">--select faculty--</option>
                     <?php
                         $facultyData="SELECT * FROM faculties";
@@ -85,26 +80,16 @@
 
             <!-- course-->
             <div class="courses">
-<<<<<<< HEAD
                 <label class ="label">Course</label>
                 <select class = "add-select" name="course" id="course">
-=======
-                <label class="label">Course</label class="label">
-                <select name="course" id="course">
->>>>>>> b4db66496c6498ae6f23cf22d146b2fa666fafff
                     <option value="">--select course--</option>
                 </select>
             </div>
 
             <!-- year dropdown -->
             <div class="years">
-<<<<<<< HEAD
                 <label class ="label" for="year"> Year</label>
                 <select class = "add-select" name="year" id="year"></select>
-=======
-                <label class="label" for="year"> Year</label class="label">
-                <select name="year" id="year"></select>
->>>>>>> b4db66496c6498ae6f23cf22d146b2fa666fafff
                 
                 <script type="text/javascript">
                     window.onload = function (){
@@ -126,11 +111,7 @@
 
             <div class="file">
                 
-<<<<<<< HEAD
                     <label class ="label" for="">set</label>
-=======
-                    <label class="label" for="">set</label class="label">
->>>>>>> b4db66496c6498ae6f23cf22d146b2fa666fafff
                     <input type="file" name= "myfile" class ="">
                 
 
