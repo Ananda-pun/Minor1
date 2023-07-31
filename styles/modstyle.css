@@ -1,0 +1,52 @@
+.form{
+    /* border: solid black; */
+    margin-top:10px;
+    background-color:#faf0ca;
+    box-shadow:0 0 10px rgba(0,0,0,0.4);
+   height:550px;
+   width:400px;
+   text-align:center;
+}
+.add-questions{
+   display:flex;
+   justify-content:center;
+   align-items:center;
+  
+   
+   
+}
+.label{
+    font-weight:bold;
+    padding: 10px;
+    width:200px;
+    display:block;
+    margin-left:5px;
+   
+}
+
+.add-select{
+    padding: 5px;
+    /* margin-top:10px; */
+    width:250px;
+    height:50px;
+    border: solid #FDC921 3px;
+    border-radius:12px;
+}
+.selectfile{
+    height:40px;
+    border-radius:5px;
+    width:400px;
+    margin-left:80px;
+}
+.add{
+    margin-left:30px;
+    width:100px;
+    height:25px;
+    border-radius:5px;
+    background-color:#FDC921;
+}
+
+.add:hover {
+    cursor:pointer;
+    background-color:white;
+}

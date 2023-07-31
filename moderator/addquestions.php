@@ -10,24 +10,17 @@
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src = "myscript.js"> </script>
-    <style>
-        .label{
-            padding: 10px;
-        }
-
-        .add-select{
-            padding: 10px;
-        }
-    </style>
+    <link rel="stylesheet" href="../styles/modstyle.css">
     
 </head>
 <body>
-    <?php  
+    <?php 
         include('../include/headerLogout.php');
     ?>
    <div class="add-questions">
-       <form action="addaction.php" method="POST" enctype = "multipart/form-data">
+       <form action="addaction.php" class="form" method="POST" enctype = "multipart/form-data">
             <!-- Faculty dropdown -->
+             <!-- la hai sathi haru -->
             <div class="faculties">
                 <label class = "label">Faculty</label>
                 <select class = "add-select" name="faculty" id="faculty" class="faculty">
@@ -49,9 +42,6 @@
             <div class="programs">
                 <label class="label">Program</label>
                 <select class = "add-select" name="program" id="program" >
-
-                <label class="label">Program</label class="label">
-                <select name="program" id="program" >
                     <option value="">--select program--</option>
                 </select> <br>
             </div>
@@ -59,13 +49,8 @@
 
             <!-- semester-->
             <div class="semesters">
-
                 <label class ="label">Semester</label>
                 <select class = "add-select" name="semester" id="semester">
-
-                <label class="label">Semester</label class="label">
-                <select name="semester" id="semester">
-
                     <option value="">--select semester--</option>
                     <option value="1">First semester</option>
                     <option value="2">Second semester</option>
@@ -111,14 +96,14 @@
 
             <div class="file">
                 
-                    <label class ="label" for="">set</label>
-                    <input type="file" name= "myfile" class ="">
+                    <label class ="label" for="">Set</label>
+                    <input type="file" name= "myfile" class ="selectfile">
                 
 
                 
             </div>
 
-            <button type = "submit" name= "add" id="add" class="add">ADD</button>
+            <button type = "submit" name= "add" class="add" >ADD</button>
         </form>
    </div>
 

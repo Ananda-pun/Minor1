@@ -38,15 +38,19 @@
 			
 		</div>
 		<div class="foot2">
-			<p>Contact us</p>
-			<p><i class="fas fa-phone"></i> +977-4268691</p>
-			<p><i class="fas fa-envelope"></i> questionhubnp@gmail.com </p><br/><br>
-			<p>Social Links</p>
-			<p class="social-icons">
-				<a href="#"><i class="fab fa-facebook"></i></a>&nbsp;
-      			<a href="#"><i class="fab fa-twitter"></i></a>&nbsp;
-      			<a href="#"><i class="fab fa-instagram"></i></a></p><br/>
-      		<p><a href="<?php echo PAGE_URL."aboutus.php" ?>" class="abtus">About QuestionHub</a></p>
+			<div class="upperfoot">
+				<p>Contact us</p>
+				<p><i class="fas fa-phone"></i> +977-4268691</p>
+				<p><i class="fas fa-envelope"></i> questionhubnp@gmail.com </p><br/><br>
+			</div>
+			<div class="lowerfoot">
+				<p>Social Links</p>
+				<p class="social-icons">
+					<a href="#"><i class="fab fa-facebook"></i></a>&nbsp;
+								<a href="#"><i class="fab fa-twitter"></i></a>&nbsp;
+								<a href="#"><i class="fab fa-instagram"></i></a></p><br/>
+							<p><a href="<?php echo PAGE_URL."aboutus.php" ?>" class="abtus">About QuestionHub</a></p>
+			</div>
       	</div>
 			
 			
