@@ -47,6 +47,20 @@
             border-radius: 10px;
             font-size: 16px;
         }
+        .inputbtn{
+            width: 80%;
+            padding: 8px;
+            margin-bottom: 15px;
+            background-color: #e2bc40;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            font-size: 16px;
+
+        }
+        .inputbtn:hover {
+            cursor: pointer;
+            background-color: #fdc921;
+        }
         
         .inputbox:hover {
             cursor: pointer;
@@ -56,6 +70,7 @@
         	margin-right: 20px;
         	
         }
+       
         @media (max-width: 600px) {
         	.registration {
         		flex-direction: column;
@@ -85,8 +100,11 @@
             background-color: red;
             color: white;
             /* height:100px; */
-            width:100%;
+            width:100%;.inputbox{
+            background-color:
         }
+        }
+        
 
     </style>
 </head>
@@ -114,12 +132,16 @@
                 <label for="confirm" class="labelreg">Confirm Password</label>
                 <input type="password" class="inputbox" name="password2" required>
 
-                <input type="submit" class="inputbox" value="Register" name = "register">
+                <input type="submit" class="inputbtn" value="Register" name = "register">
             </form>
         </div>
     
         <div class="regphoto">
+<<<<<<< HEAD
             <img src="<?php echo IMG_URL."regphoto.jpg" ?>" height= "600px" width ="600px">
+=======
+            <img src="<?php echo IMG_URL."regphoto.jpg"?>" height= "600px" width ="600px">
+>>>>>>> b4db66496c6498ae6f23cf22d146b2fa666fafff
         </div>
     </div>
 </body>

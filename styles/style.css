@@ -313,17 +313,28 @@
 
 		.logbutton {
 			width: 49%;
-			height: 50px;
+			height: 40px;
+			border-radius: 5px;
 		}
 
 		.logbutton:hover {
 			cursor: pointer;
-			background-color: rgb(63, 189, 122);
+			background-color: #fdc921;
 
 		}
 
 		.formh4 {
-			color: rgb(112, 109, 109);
+			color: #fdc921;
+		}
+		.labellog{
+			margin-left: 10px;
+			margin-top: 20px;
+			font-size: large;
+		}
+		.passlog{
+			margin-left: 10px;
+			font-size: large;
+
 		}
 		/* login finish */
 
@@ -345,6 +356,7 @@
 			width: 400px;
 			border-radius: 10px;
 		}
+		
 
 		
 
@@ -436,3 +448,6 @@
             }
         }
 		/* tips finish */
+
+		/* moderator css */
+		

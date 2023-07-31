@@ -16,6 +16,15 @@
             /* height:100px; */
             width:50%;
         }
+		.formlog{
+			width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+            height: 350px;
+            border-radius: 15px;
+		}
         </style>
 </head>
 <body>
@@ -29,13 +38,13 @@
 			<label class="labellog">Username</label>
 			<input type="text" class="inputlog" name = "email" placeholder ="username or email" required ><br><br>
 
-			<label>Password</label>
+			<label class="passlog">Password</label>
 			<input type="password" class="inputlog" name="password" placeholder = "password" required >
 
 			<button type="submit" class="logbutton" name="login">Login</button>
 			<a href="register.php"><button type="button" class="logbutton">Register</button></a>
 			
-			<a href="#"><p>Forgot password</p></a>
+			<!-- <a href="#"><p>Forgot password</p></a> -->
 		</form>
 		<?php
    			if(isset($_SESSION['message'])){
