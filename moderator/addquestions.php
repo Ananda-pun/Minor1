@@ -52,13 +52,11 @@
             </div> 
             <!--program dropdown-->
             <div class="programs">
-<<<<<<< HEAD
                 <label class="label">Program</label>
                 <select class = "add-select" name="program" id="program" >
-=======
+
                 <label class="label">Program</label class="label">
                 <select name="program" id="program" >
->>>>>>> b4db66496c6498ae6f23cf22d146b2fa666fafff
                     <option value="">--select program--</option>
                 </select> <br>
             </div>
@@ -66,13 +64,13 @@
 
             <!-- semester-->
             <div class="semesters">
-<<<<<<< HEAD
+
                 <label class ="label">Semester</label>
                 <select class = "add-select" name="semester" id="semester">
-=======
+
                 <label class="label">Semester</label class="label">
                 <select name="semester" id="semester">
->>>>>>> b4db66496c6498ae6f23cf22d146b2fa666fafff
+
                     <option value="">--select semester--</option>
                     <option value="1">First semester</option>
                     <option value="2">Second semester</option>
