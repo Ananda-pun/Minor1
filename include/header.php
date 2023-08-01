@@ -24,7 +24,7 @@
 		</div>
 
 		<h1 class="content">
-			Question hub
+			Question Hub
 		</h1>
 
 		<div class="header3">

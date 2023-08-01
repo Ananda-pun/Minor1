@@ -25,20 +25,26 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<!-- social media icons -->
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js"></script>
+	
+
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<style type="text/css">
-		
 
-
-		
 		.button{
-			height: 100px;
-			width: 100px;
+			height: 60px;
+			width: 70px;
 			margin-right: 40px;
 		}
 		.buttonmoderator{
 			text-align: center;
-			background-color: lightcyan;
+			background-color: white;
+		}
+		#button{
+			height: 60px;
+			width: 70px;
+			margin-right: 40px;
+
 		}
 		
 
@@ -57,9 +63,23 @@
 		
 		<div class="buttonmoderator">
 			
-			<a href="addquestions.php"><button class="button" name="question">Add Questions</button></a>
+			
+			
 			<button class="button" name="question">View Questions</button>
+			<button id="button">Add Question</button>
 		</div>
+		<script type="text/javascript">
+				$(function(){
+					$('#button').click(function(){ 
+						if(!$('#iframe').length) {
+								$('#iframeHolder').html('<iframe id="iframe" src="addquestions.php" width="100%" height="450"></iframe>');
+						}
+					});   
+				});
+			</script>
+	
+				
+				<div id="iframeHolder"></div>
 			
 		
 		

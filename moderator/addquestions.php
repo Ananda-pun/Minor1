@@ -11,12 +11,19 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src = "myscript.js"> </script>
     <link rel="stylesheet" href="../styles/modstyle.css">
+    <style>
+        .label{
+            padding: 10px;
+        }
+
+        .add-select{
+            padding: 10px;
+        }
+    </style>
     
 </head>
 <body>
-    <?php 
-        include('../include/headerLogout.php');
-    ?>
+    
    <div class="add-questions">
        <form action="addaction.php" class="form" method="POST" enctype = "multipart/form-data">
             <!-- Faculty dropdown -->

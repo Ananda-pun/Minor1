@@ -23,7 +23,7 @@
         </div>
  
         <div class="content">
-             Question hub
+            <h1> Question Hub </h1>
         </div>
  
         <div class="header3">
