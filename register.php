@@ -137,11 +137,7 @@
         </div>
     
         <div class="regphoto">
-<<<<<<< HEAD
             <img src="<?php echo IMG_URL."regphoto.jpg" ?>" height= "600px" width ="600px">
-=======
-            <img src="<?php echo IMG_URL."regphoto.jpg"?>" height= "600px" width ="600px">
->>>>>>> b4db66496c6498ae6f23cf22d146b2fa666fafff
         </div>
     </div>
 </body>
