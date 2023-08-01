@@ -10,6 +10,9 @@
     <title>Document</title>
     <link rel="stylesheet" href="styles/style.css">
 	<style>
+		.loginbdy{
+			background-color: #faf0ca;
+		}
         .user_not_found{
             background-color: red;
             color: white;
@@ -20,14 +23,14 @@
 			width: 400px;
             margin: 0 auto;
             padding: 20px;
-            background-color: #ffffff;
+            background-color: white;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
             height: 350px;
             border-radius: 15px;
 		}
         </style>
 </head>
-<body>
+<body class="loginbdy">
 	<div class ="logo">
 			<a href="pages/landing.php" id="logo"> <img src="<?php echo IMG_URL."logofinal.png" ?>" alt="loading" height="100px" width="100px" ></a>
 		</div>
@@ -36,7 +39,7 @@
 			<h2 class="formh4">Welcome To QuestionHUB</h2>
 			<!-- <h4>Please enter your email and password to proceed</h4> -->
 			<label class="labellog">Username</label>
-			<input type="text" class="inputlog" name = "email" placeholder ="username or email" required ><br><br>
+			<input type="text" class="inputlog" name = "email" placeholder ="username or email" required ><br>
 
 			<label class="passlog">Password</label>
 			<input type="password" class="inputlog" name="password" placeholder = "password" required >

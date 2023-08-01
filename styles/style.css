@@ -353,6 +353,7 @@
 			width: 49%;
 			height: 40px;
 			border-radius: 5px;
+			margin-top: 20px;
 		}
 
 		.logbutton:hover {
@@ -366,12 +367,13 @@
 		}
 		.labellog{
 			margin-left: 10px;
-			margin-top: 20px;
+			margin-top: 10px;
 			font-size: large;
 		}
 		.passlog{
 			margin-left: 10px;
 			font-size: large;
+			margin-top: 10px;
 
 		}
 		/* login finish */

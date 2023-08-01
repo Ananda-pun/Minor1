@@ -56,11 +56,34 @@
     });
 })
     </script>
+    <style>
+        .quesform{
+            background-color: #faf0ca;
+            width: 400px;
+            text-align: center;
+            height: 530px;
+            margin-top: 30px;
+            margin-bottom: 40px;
+            box-shadow:0 0 10px rgba(0,0,0,0.4);
+        }
+        .view{
+            margin-top: 20px;
+            width:60px;
+            height:40px;
+            border-radius:5px;
+            background-color:#FDC921;
+            margin-left: 190px;
+        }
+        .view:hover{
+            cursor:pointer;
+            background-color:white;
+        }
+    </style>
     
 </head>
 <body>
     <div class="add-questions">
-       <form action="../moderator/addaction.php" method="POST" enctype = "multipart/form-data">
+       <form action="../moderator/addaction.php" method="POST" enctype = "multipart/form-data" class="quesform">
             <!-- Faculty dropdown -->
             <!-- la hai sathi haru -->
             <div class="faculties">
