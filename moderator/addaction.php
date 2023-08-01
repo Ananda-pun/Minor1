@@ -72,6 +72,19 @@
             }
         }
     }
+    if(isset($_POST['view'])){
+        $faculty_name = $_POST['faculty'];
+        $program_id = $_POST['program'];
+        $semester = $_POST['semester'];
+        $course_id = $_POST['course'];
+        $year = $_POST['year'];
+
+        $sql = "SELECT path FROM images WHERE id = 1"; 
+        $result = mysqli_query($conn, $sql); 
+        $image_path = mysqli_fetch_assoc($result)['path'];
+
+    }
+
 
     
         
