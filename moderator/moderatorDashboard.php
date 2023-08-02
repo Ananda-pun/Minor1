@@ -28,12 +28,13 @@
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js"></script>
 	
 
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="../styles/style.css">
 	<style type="text/css">
 
 		.button{
-			height: 60px;
-			width: 70px;
+			margin-top: 20px;
+			height: 80px;
+			width: 80px;
 			margin-right: 40px;
 		}
 		.buttonmoderator{
@@ -41,10 +42,14 @@
 			background-color: white;
 		}
 		#button{
-			height: 60px;
-			width: 70px;
+			height: 80px;
+			width: 80px;
 			margin-right: 40px;
 
+		}
+		#iframeHolder{
+			height: 600px;
+			
 		}
 		
 
@@ -72,7 +77,7 @@
 				$(function(){
 					$('#button').click(function(){ 
 						if(!$('#iframe').length) {
-								$('#iframeHolder').html('<iframe id="iframe" src="addquestions.php" width="100%" height="450"></iframe>');
+								$('#iframeHolder').html('<iframe id="iframe" src="addquestions.php" width ="100%" height = "650px" style ="border:none"></iframe>');
 						}
 					});   
 				});

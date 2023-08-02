@@ -12,51 +12,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Questions</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src = "../moderator/myscript.js"> </script>
+    <script type="text/javascript" src = "../moderator/add-script.js"> </script>
     <link rel="stylesheet" href="../styles/modstyle.css">
     <script>
         $(document).ready(function(){
-    $(document).on('change','#faculty', function(){
-        var facultyID = $(this).val();
-        if(facultyID){
-            $.ajax({
-                type:'POST',
-                url:'../moderator/addaction.php',
-                data:{'faculty_id':facultyID}, 
-                success:function(result){
-                    $('#program').html(result);  
+            $(document).on('change','#faculty', function(){
+                var facultyID = $(this).val();
+                if(facultyID){
+                    $.ajax({
+                        type:'POST',
+                        url:'../moderator/dropdown.php',                      
+                        data:{'faculty_id':facultyID}, 
+                        success:function(result){
+                            $('#program').html(result);  
+                        }
+                    }); 
                 }
-            }); 
-        }
-        else{
-            $('#program').html('<option value="">faculty</option>');
-            $('#semester').html('<option value="">program </option>');
-            $('#course').html('<option value="">course </option>');  
-        }
-    });
-    $(document).on('change','#semester', function(){
-        var semesterID = $(this).val();
-        var programID = $('#program').val();
+                else{
+                    $('#program').html('<option value="">faculty</option>');
+                    $('#semester').html('<option value="">program </option>');
+                    $('#course').html('<option value="">course </option>');  
+                }
+            });
+            $(document).on('change','#semester', function(){
+                var semesterID = $(this).val();
+                var programID = $('#program').val();
 
-        if(semesterID){
-            $.ajax({
-                type:'POST',
-                url:'../moderator/addaction.php',
-                data: { 'semester': semesterID,
-                        'program': programID},
-                success:function(result){
-                    $('#course').html(result);
-                    // console.log(semesterID, programID);
-                   // console.log("Succes");
-                }
-            }); 
-        }else{
-            $('#course').html('<option value="">course</option>');
-            
-        } 
-    });
-})
+                if(semesterID){
+                    $.ajax({
+                        type:'POST',
+                        url:'../moderator/dropdown.php',
+                        data: { 'semester': semesterID,
+                                'program': programID},
+                        success:function(result){
+                            $('#course').html(result);
+                            // console.log(semesterID, programID);
+                        // console.log("Succes");
+                        }
+                    }); 
+                    
+                }else{
+                    $('#course').html('<option value="">course</option>');
+                    
+                } 
+            });
+        }) 
     </script>
     <style>
+        #add-questions{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            /* padding-left: 25%; */
+
+        }
         .quesform{
             background-color: #faf0ca;
             width: 400px;
@@ -65,6 +75,7 @@
             margin-top: 30px;
             margin-bottom: 40px;
             box-shadow:0 0 10px rgba(0,0,0,0.4);
+
         }
         .view{
             margin-top: 20px;
@@ -82,8 +93,8 @@
     
 </head>
 <body>
-    <div class="add-questions">
-       <form action="../moderator/addaction.php" method="POST" enctype = "multipart/form-data" class="quesform">
+    <div id="add-questions">
+       <form action="view-question.php" method="POST" enctype = "multipart/form-data" class="quesform">
             <!-- Faculty dropdown -->
             <!-- la hai sathi haru -->
             <div class="faculties">
@@ -134,30 +145,6 @@
                 <select class = "add-select" name="course" id="course">
                     <option value="">--select course--</option>
                 </select>
-            </div>
-
-            <!-- year dropdown -->
-            <div class="years">
-                <label class ="label" for="year"> Year</label>
-                <select class = "add-select" name="year" id="year"></select>
-                
-                <script type="text/javascript">
-                    window.onload = function (){
-
-                        var givenYear = document.getElementById('year').value;
-                        var currnetYear= (new Date()).getFullYear();
-
-                        for (var i = 2015; i <= currnetYear; i++) {
-                            var option= document.createElement("OPTION");
-                            option.innerHTML = i;
-                            option.value = i;
-                            year.appendChild(option);
-                        }
-                    }
-
-                </script>
-                
-            </div>
 
             
 

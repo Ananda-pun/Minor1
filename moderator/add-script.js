@@ -4,25 +4,17 @@ $(document).ready(function(){
         if(facultyID){
             $.ajax({
                 type:'POST',
-                url:'dropdown.php',
+                url:'addaction.php',
                 data:{'faculty_id':facultyID}, 
                 success:function(result){
-                    // console.log(faculty_id);
-                    $('#program').html(result);  
+                    // $('#program').html(result);  
                 }
-            }); 
-            
+            });    
             
         }
-        else{
-            $('#program').html('<option value="">faculty</option>');
-            $('#semester').html('<option value="">program </option>');
-            $('#course').html('<option value="">course </option>');  
-        }
+
     });
             
-
-    
     $(document).on('change','#semester', function(){
         var semesterID = $(this).val();
         var programID = $('#program').val();
@@ -30,18 +22,14 @@ $(document).ready(function(){
         if(semesterID){
             $.ajax({
                 type:'POST',
-                url:'dropdown.php',
+                url:'addaction.php',
                 data: { 'semester': semesterID,
                         'program': programID},
                 success:function(result){
-                    $('#course').html(result);
+                    // $('#course').html(result);
                 }
-            }); 
-             
-        }else{
-            $('#course').html('<option value="">course</option>');
-            
-        } 
+            });     
+        }
     });
     
 });
