@@ -1,5 +1,6 @@
 <?php
  include ('../constant.php');
+ include('../include/dbconnection.php');
  
 
 
@@ -33,16 +34,17 @@
 			</div>
 			
             <div class="search">
-            	<form action="searchHandle.php" method = "POST">
+            	<form action="search-view.php" method="POST" id="search-form">
             
-                    <input type="text" class="search" placeholder=" Search " name="search">
+                    <input type="text" id="search-input" class="search" placeholder=" Search " name="sear">
             
                     <a href="">
-						<button  type = "submit" name="searchSubmit">
+						<button  type = "submit" name="search_submit">
 							<i class="fa fa-search" style="font-size: 18px;"></i>
 						</button>
 					</a>       
                 </form>
+				
             </div>
          
         </div>	         

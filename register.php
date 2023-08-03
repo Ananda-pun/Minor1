@@ -107,6 +107,24 @@
         
 
     </style>
+    <script>
+        function validateForm() {
+			var fname = document.getElementById('fname').value;
+			var lname = document.getElementById("lname").value;
+			var regex = /^[a-zA-Z\s]+$/;
+
+			if (fname === "" || !regex.test(fname)) {
+				alert("Please enter a valid first name with only alphabetical characters.");
+				return false;
+			} else if (lname === "" || !regex.test(lname)) {
+				alert("Please enter a valid last name with only alphabetical characters.");
+				return false;
+			} 
+
+			return true;
+		}
+
+    </script>
 </head>
 <body>
     <div class ="logo">
@@ -116,12 +134,12 @@
 	<div class="registration">
         <div class="formreg">
             <h2>Registration Form</h2>
-            <form action="action.php" method="POST">
+            <form action="action.php" method="POST" onsubmit="return validateForm()">
                 <label for="firstname" class="labelreg"> First Name</label>
-                <input type="text" class="inputbox" name="firstname" required>
+                <input type="text" class="inputbox" name="firstname" id="fname" required>
 
                 <label for="lastname" class="labelreg"> Last Name</label>
-                <input type="text" class="inputbox" name="lastname" required>
+                <input type="text" class="inputbox" name="lastname" id="lname" required>
 
                 <label for="email" class="labelreg">Email</label>
                 <input type="email" class="inputbox" name="email">
