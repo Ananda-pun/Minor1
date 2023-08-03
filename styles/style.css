@@ -146,6 +146,7 @@
 			display: flex;
 			flex-direction: row;
 			justify-content: space-between;
+			
 		}
 		.foot1
 		{
@@ -204,6 +205,7 @@
 		}
 		
 		.footmiddle-content{
+			padding-top: 20px;
 			font-size: 20px;
 			width: 100%;
 			
@@ -228,6 +230,15 @@
 		}
 		.abtus:hover{
 			color: yellow;
+		}
+		.upperfoot{
+			font-weight: bold;
+			margin-top: 15px;
+			/* padding-top: 80px; */
+		}
+		.lowerfoot{
+			font-weight: bold;
+			padding-top: 80px;
 		}
 
 		
@@ -408,6 +419,7 @@
             width: 100%;
             height: 500px;
 			padding-left: 50px;
+			text-align: justify;
             
 			
 
@@ -459,12 +471,12 @@
             padding: 6px 6px 6px 2px;
             text-decoration: none;
             font-size: 2rem;
-            color: #818181;
+            color: #050505;
             display: block;
         }
         
         .sidemenu a:hover {
-            color: #f1f1f1;
+            color: #FDC921;
         }
         .maincon {
             background-color: #faf0ca;

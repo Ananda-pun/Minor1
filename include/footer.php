@@ -13,6 +13,7 @@
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
     <link rel="stylesheet" href="<?php echo CSS_URL."style.css" ?>">
+	
 </head>
 <body>
 <div id="footer">
@@ -21,16 +22,17 @@
 		</div>
 		<div class="footmiddle">
 			<div class="footform">
-			<form>
+			<form class="formfooter" action="../suggestform.php" method="POST" onsubmit =" return fun()">
 				Name:<br>
-				<input type="text" name=""><br>
+				<input type="text" name="name"><br>
 				Email:<br>
-				<input type="email" name=""><br>
+				<input type="email" name="email"><br>
 				Suggestions:<br>
 				<textarea name="message" cols="32" rows="10"></textarea><br>
-				<input type="submit" class="submit" name="submit" value="Submit">
+				<input type="submit" class="submit" name="submit" value="Submit" onsubmit="fun()">
 			
-			</form>	
+			</form>
+			<p id="result"></p>	
 			</div>	
 			<div class="footmiddle-content"><i class="fas fa-copyright"></i>2023 QHUB.All rights reserved</p>
 			
