@@ -27,17 +27,33 @@
             width: 70%;
             text-align: center;
             display: flex;
-            flex-direction: row;
+            justify-content:space-between;
             margin: auto;
             padding: 10px;
+            
         }
         .buttons{
-            height: 50px;
-            width: 100px;
+            height: 100px;
+            width: 200px;
             background-color: green;
         }
         table{
             background-color:light green;
+            width: 70%;
+            margin: 100px auto;
+            text-align: center;
+            margin-top: 0;
+        }
+        table{
+            border-collapse: collapse;
+        }
+        th{
+            border: solid 2px;
+            height: 30px;
+        }
+        td{
+            border: solid 1px;
+            height: 30px;
             
         }
     </style>
@@ -70,38 +86,37 @@
                 <th colspan ="2">Action</th>
             </tr>
 
-<?php
+            <?php
 
-// displaying the users 
-$sql = "SELECT * FROM userdetail";
+            // displaying the users 
+            $sql = "SELECT * FROM userdetail WHERE role_name IN ('Moderator', 'User')";
+            $result = $conn -> query($sql);
 
+            $count=1;
+            if($result){
+                while($row = $result->fetch_assoc()){
+                    echo "<tr> 
+                            <td>{$count}</td>
+                            <td>{$row['Name']}</td>
+                            <td>{$row['email']}</td>
+                            <td>{$row['role_name']}</td>
+                            <td>
+                            <a href='useredit.php'>Edit</a>
+                            </td>
+                            <td>
+                            <a href='userdelete.php'>Delete</a>
+                            </td>
+                        </tr>
+                            ";
+                            $count++;
+                }
+                ?>
 
-$result = $conn -> query($sql);
+        </table>
 
-$count=1;
-if($result){
-    while($row = $result->fetch_assoc()){
-        echo "<tr> 
-                <td>{$count}</td>
-                <td>{$row['Name']}</td>
-                <td>{$row['email']}</td>
-                <td>{$row['role_name']}</td>
-                <td>
-                  <a href='useredit.php'>Edit</a>
-                </td>
-                <td>
-                  <a href='userdelete.php'>Delete</a>
-                </td>
-              </tr>
-                ";
-    }
-    ?>
-
-    </table>
-
-    <?php
+        <?php
             }
-    ?>
+        ?>
 
     </div>
 </body>

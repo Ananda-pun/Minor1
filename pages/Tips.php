@@ -14,10 +14,21 @@
     
 </head>
 <body>
-  <?php 
-    include('../include/header.php');
-    include('../include/nav.php');
-  ?>
+    <?php 
+		if(isset($_SESSION['username'])){
+			// header("Location: login.php");
+			
+			if($_SESSION['role_name']="User"){
+				include('../include/headerLogout.php');
+				include('../include/nav.php');
+			}
+		}
+		else{
+            include('../include/header.php');
+            include('../include/nav.php');
+		}
+	
+	?>
         
 
 	

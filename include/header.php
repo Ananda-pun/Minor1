@@ -36,7 +36,7 @@
             <div class="search">
             	<form action="../pages/view-question.php" method="POST" id="search-form">
             
-                    <input type="text" id="search-input" class="search" placeholder=" Search " name="sear">
+                    <input type="text" id="search-input" class="search" placeholder=" Search by course name " name="sear">
             
                     <a href="../pages/view-question.php">
 						<button  type = "submit" name="search_submit">

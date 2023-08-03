@@ -10,7 +10,7 @@
     <title>Document</title>
     <style>
         table{
-            width: 50%;
+            width: 60%;
             border-collapse: collapse;
             margin:100px auto;
             
@@ -21,17 +21,40 @@
             border: solid 1px;
             text-align: center;
         }
+        th{
+            background-color: yellow;
+        }
+        #year{
+            width: 110px;
+        }
+        #action{
+            width: 110px;
+        }
     </style>
 </head>
 <body>
+<?php 
+		if(isset($_SESSION['username'])){
+			// header("Location: login.php");
+			
+			if($_SESSION['role_name']="User"){
+				include('../include/headerLogout.php');
+				// include('../include/nav.php');
+			}
+		}
+		else{
+			include('../include/header.php');
+		}
+	
+	?> 
     <!-- showing the question in table -->
     <table style="border:solid 2px ">
         <thead>
             <tr>
                 <th> Course </th>
-                <th>year</th>
+                <th id ="year">year</th>
                 <th>File name</th>
-                <th>Action</th>
+                <th id = "action">Action</th>
             </tr>
         </thead>
         <tbody>
@@ -80,8 +103,8 @@
                         </tr>";
                         }
                     }
+                }
             }
-        }
             ?>
         </tbody>
     </table>

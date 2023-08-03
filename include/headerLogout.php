@@ -33,12 +33,12 @@
              
              
             <div class="search">
-                <form action="../pages/searchHandle.php" method = "POST">
+                <form action="../pages/view-question.php" method = "POST">
             
-                   <input type="text" class="search" placeholder=" Search " name="search">
+                   <input type="text" class="search-input" placeholder=" Search by course name " name="search">
             
-                   <a href="">
-                       <button  type = "submit" name="searchSubmit">
+                   <a href="../pages/view-question.php">
+                       <button  type = "submit" name="search_Submit">
                            <i class="fa fa-search" style="font-size: 18px;"></i>
                        </button>
                    </a>       

@@ -5,11 +5,11 @@
 
     include('../constant.php');
     if(!isset($_SESSION['username'])){
-        header("Location: login.php");
+        header("Location: ../login.php");
     }
 
     if($_SESSION['role_name']!="Moderator"){
-        header("Location: landing.php");
+        header("Location: ../pages/landing.php");
     }
 
     // Echo "Welcome to Moderator DashBoard,".$_SESSION['Name'];
