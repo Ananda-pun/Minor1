@@ -15,8 +15,6 @@
 		<ul>
 			<li><a class="navlink" href="landing.php">Home</a></li>
 			<li><a class="navlink" href="questions.php">Questions</a></li>
-			<li><a class="navlink" href="syllabus.php">Syllabus</a></li>
-			
 			<li><a class="navlink" href="aboutus.php">About us</a></li>
 			<li><a class="navlink" href="tips.php">Tips</a></li>
 
