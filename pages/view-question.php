@@ -76,7 +76,7 @@
                         <td>{$row['year']}</td>
                         <td>{$row['question_name']}</td>
                         <td>
-                            <a download='{$row['question_name']}' href='sets/{$row['question_name']}' class='download'>Download</a>
+                            <a download='{$row['question_name']}' href='../moderator/sets/{$row['question_name']}' class='download'>Download</a>
                         </td>
                     </tr>";
 
@@ -98,7 +98,7 @@
                             <td>{$row['year']}</td>
                             <td>{$row['question_name']}</td>
                             <td>
-                                <a download='{$row['question_name']}' href='sets/{$row['question_name']}' class='download'>Download</a>
+                                <a download='{$row['question_name']}' href='../moderator/sets/{$row['question_name']}' class='download'>Download</a>
                             </td>
                         </tr>";
                         }

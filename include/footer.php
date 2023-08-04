@@ -24,11 +24,11 @@
 			<div class="footform">
 			<form class="formfooter" action="../suggestform.php" method="POST" onsubmit =" return fun()">
 				Name:<br>
-				<input type="text" name="name"><br>
+				<input type="text" name="name" class="infoot"><br>
 				Email:<br>
-				<input type="email" name="email"><br>
+				<input type="email" name="email" class="infoot"><br>
 				Suggestions:<br>
-				<textarea name="message" cols="32" rows="10"></textarea><br>
+				<textarea name="message" cols="32" rows="10" class="infoot"></textarea><br>
 				<input type="submit" class="submit" name="submit" value="Submit" onsubmit="fun()">
 			
 			</form>

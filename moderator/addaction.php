@@ -13,7 +13,7 @@
         
         $filename = $_FILES['myfile']['name'];
         // echo $filename; die();
-        $destination = 'sets/'.$filename;
+        $destination = '../moderator/sets/'.$filename;
 
         $extension = pathinfo($filename, PATHINFO_EXTENSION);
         $file  = $_FILES['myfile']['tmp_name'];
@@ -26,8 +26,8 @@
              
             // echo $file, $destination; die();
             if(move_uploaded_file($_FILES['myfile']['tmp_name'], "sets/".$_FILES['myfile']['name'])){
-                $sql = "INSERT INTO questions (year, course_id, question_name)
-                        VALUES('$year','$course_id','$filename')";
+                $sql = "INSERT INTO questions (year, course_id, question_name, path)
+                        VALUES('$year','$course_id','$filename','$destination')";
 
                 //  echo "Heelo"; die();       
                 if($conn->query($sql)){
