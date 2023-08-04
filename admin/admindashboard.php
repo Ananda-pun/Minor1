@@ -22,21 +22,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        #button{
-            height: 150px;
-            width: 70%;
-            text-align: center;
-            display: flex;
-            justify-content:space-between;
-            margin: auto;
-            padding: 10px;
-            
-        }
-        .buttons{
-            height: 100px;
-            width: 200px;
-            background-color: green;
-        }
+       
         table{
             background-color:light green;
             width: 70%;
@@ -64,17 +50,9 @@
     <?php 
         include('../constant.php');
         include('../include/headerLogout.php');
+        include('admin-nav.php');
     ?>
     <!--Adding Buttons  -->
-    <div id="button">
-        <div class="buttton">
-            <a href=""><button class="buttons">Manage Question</button></a>
-        </div>
-        
-        <div class="button">
-            <a href=""><button class ="buttons">Manage users</button></a>
-        </div>
-    </div>
 
     <div>
         <table style="border: 2px solid black;">
@@ -96,19 +74,19 @@
             if($result){
                 while($row = $result->fetch_assoc()){
                     echo "<tr> 
-                            <td>{$count}</td>
-                            <td>{$row['Name']}</td>
-                            <td>{$row['email']}</td>
-                            <td>{$row['role_name']}</td>
-                            <td>
-                            <a href='useredit.php'>Edit</a>
-                            </td>
-                            <td>
-                            <a href='userdelete.php'>Delete</a>
-                            </td>
-                        </tr>
-                            ";
-                            $count++;
+                        <td>{$count}</td>
+                        <td>{$row['Name']}</td>
+                        <td>{$row['email']}</td>
+                        <td>{$row['role_name']}</td>
+                        <td>
+                            <a href='useredit.php?user_id={$row['user_id']}'>Edit</a>
+                        </td>
+                        <td>
+                            <a href='userdelete.php?user_id={$row['user_id']}'>Delete</a>
+                        </td>
+                    </tr>";
+
+                    $count++;
                 }
                 ?>
 
