@@ -1,6 +1,6 @@
 <!-- <?php
  include ('../constant.php');
- 
+ include('../include/dbconnection.php');
 
 
  ?> -->
@@ -35,10 +35,10 @@
             <div class="search">
                 <form action="../pages/view-question.php" method = "POST">
             
-                   <input type="text" class="search-input" placeholder=" Search by course name " name="search">
+                   <input type="text" class="search-input" placeholder=" Search by course name " name="sear">
             
                    <a href="../pages/view-question.php">
-                       <button  type = "submit" name="search_Submit">
+                       <button  type = "submit" name="search_submit">
                            <i class="fa fa-search" style="font-size: 18px;"></i>
                        </button>
                    </a>       

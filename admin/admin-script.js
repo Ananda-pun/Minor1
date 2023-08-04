@@ -4,7 +4,7 @@ $(document).ready(function(){
         if(facultyID){
             $.ajax({
                 type:'POST',
-                url:'addaction.php',
+                url:'add-by-admin.php',
                 data:{'faculty_id':facultyID}, 
                 success:function(result){
                     // $('#program').html(result);  
@@ -22,7 +22,7 @@ $(document).ready(function(){
         if(semesterID){
             $.ajax({
                 type:'POST',
-                url:'addaction.php',
+                url:'add-by-admin.php',
                 data: { 'semester': semesterID,
                         'program': programID},
                 success:function(result){

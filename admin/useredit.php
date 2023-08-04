@@ -1,5 +1,19 @@
-<?php 
-    include('../include/dbconnection.php');
+<?php
+    session_start();
+    include ('../include/dbconnection.php');
+
+
+    if(!isset($_SESSION['username'])){
+        header("Location: ../login.php");
+    }
+
+    if($_SESSION['role_name']!="Admin"){
+        header("Location: ../pages/landing.php");
+    }
+
+    // Echo "Welcome to Admin DashBoard,".$_SESSION['username'];
+ 
+   
     if (isset($_GET['user_id']) && is_numeric($_GET['user_id'])) {
         $user_id = $_GET['user_id'];
 
@@ -23,7 +37,7 @@
         $select_user = "SELECT * FROM roles WHERE role_id = 3";
         $result_user = $conn->query($select_user);
         if($result_user){
-            $user = $result_user->fetch_assoc();
+            $Student = $result_user->fetch_assoc();
         }
     }
 ?>
@@ -36,6 +50,10 @@
     
 </head>
 <body>
+    <?php 
+        include('../include/headerLogout.php');
+        include('admin-nav.php');
+    ?>
     <form action="userupdate.php" method = "POST">
         <input type="hidden" name = "user_id" value ="<?php echo $row['user_id']; ?>"> <br>
         <input type="text" name = "first_name" value = "<?php echo $row['first_name']; ?>"> <br>
@@ -45,7 +63,7 @@
         <select name= "role_id" id="role_id" >
             <option value="">select role</option>
             <option value="<?php echo $moderator['role_id']; ?>"> <?php echo $moderator['role_name']; ?> </option>
-            <option value="<?php echo $user['role_id']; ?>"> <?php echo $user['role_name']; ?> </option>
+            <option value="<?php echo $Student['role_id']; ?>"> <?php echo $Student['role_name']; ?> </option>
             
         </select> <br> <br>
 

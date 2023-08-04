@@ -1,5 +1,20 @@
-<?php 
-    include('../include/dbconnection.php');
+
+<?php
+    session_start();
+    include ('../include/dbconnection.php');
+
+
+    if(!isset($_SESSION['username'])){
+        header("Location: ../login.php");
+    }
+
+    if($_SESSION['role_name']!="Admin"){
+        header("Location: ../pages/landing.php");
+    }
+
+    // Echo "Welcome to Admin DashBoard,".$_SESSION['username'];
+
+    
     $select_moderator = "SELECT * FROM roles WHERE role_id = 2";
         $result_moderator = $conn->query($select_moderator);
         if($result_moderator){
@@ -21,6 +36,7 @@
 </head>
 <body>
     <?php 
+        include('../include/headerLogout.php');
         include('admin-nav.php');
     ?>
     <div class="add-user">

@@ -1,6 +1,17 @@
-<?php 
-    include('../include/dbconnection.php');
+<?php
+    session_start();
+    include ('../include/dbconnection.php');
 
+
+    if(!isset($_SESSION['username'])){
+        header("Location: ../login.php");
+    }
+
+    if($_SESSION['role_name']!="Admin"){
+        header("Location: ../pages/landing.php");
+    }
+
+    // Echo "Welcome to Admin DashBoard,".$_SESSION['username'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -10,6 +21,7 @@
     <title>Document</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link rel="stylesheet" href="../styles/modstyle.css">
+    <script type="text/javascript" src = "admin-script.js"> </script>
     
     <script>
          $(document).ready(function(){
@@ -59,7 +71,12 @@
 
 </head>
 <body>
-    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method = "POST">
+    <?php 
+        include('../include/headerLogout.php');
+        include('admin-nav.php');
+
+    ?>
+    <form action="add-by-admin.php" method = "POST">
         <div class="faculties">
         
             <label class = "label">Faculty</label>
@@ -112,28 +129,6 @@
     </form>
 
     <!-- ADDING THE NEW CORUSE ON DATABASE -->
-    <?php 
-        if(isset($_POST['add-course'])){
-            $faculty_id = $_POST['faculty_id'];
-            $program_id = $_POST['program'];
-            $semester = $_POST['semester'];
-            $newcoruse = $_POST['newcourse'];
-            
-            try {
-                
-                $conn->begin_transaction();
-                $insert_course = "INSERT INTO courses (course_name, credit)
-                                VALUES('$newcourse', 3)";
-                $result = $conn->query($insert_course);
-
-                $insert_course_program = "INSERT INTO course_program(course_id, program_id, semester)
-                                        VALUES ('$course_id','$program_id','$semester')";
-            } catch (\Throwable $th) {
-                //throw $th;
-            }
-
-
-        }
-    ?>
+    
 </body>
 </html>

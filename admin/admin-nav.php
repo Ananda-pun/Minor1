@@ -36,11 +36,11 @@
         </div>
         <div class="links">
             <a href="admindashboard.php"><i class='bx bxs-home'></i></a>
-            <a href="manage-user.php"><button name = "manage-users" class ="button">Manage Users</button></a>
+            <a href="manage-users.php"><button name = "manage-users" class ="button">Manage Users</button></a>
             <a href="add-user.php"><button name = "add-users" class ="button">Add Users</button></a>
             <!-- <a href="manage-questions.php"><button name = "manage-questions" class ="button">Manage questions</button></a> -->
             <a href="add-course.php"><button name = "add-couses" class ="button">Add Courses</button></a>
-            <a href="add-program.php"><button name = "add-programs" class ="button">Add Programs</button></a>
+            <!-- <a href="add-program.php"><button name = "add-programs" class ="button">Add Programs</button></a> -->
         </div>
     </div>
 </body>

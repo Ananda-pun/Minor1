@@ -1,4 +1,5 @@
 <?php 
+    session_start();
     include('../include/dbconnection.php');
 ?>
 
@@ -33,15 +34,15 @@
     </style>
 </head>
 <body>
-<?php 
+    <?php 
 		if(isset($_SESSION['username'])){
 			// header("Location: login.php");
 			
-			if($_SESSION['role_name']="User"){
+			
 				include('../include/headerLogout.php');
-				// include('../include/nav.php');
-			}
+			
 		}
+		
 		else{
 			include('../include/header.php');
 		}
@@ -105,6 +106,28 @@
                     }
                 }
             }
+
+            // retrieving the data from database when user is logged in
+            // if(isset($_POST['search'])){
+                
+            //     $input=$_POST['search'];
+            //     if(!empty($input)){
+            //         $value="SELECT * FROM questiondetail WHERE course_name LIKE '%$input%'"; 
+            //         $result = $conn->query($value);
+            //         if($result){
+            //             while($row = $result->fetch_assoc()){
+            //                 echo "<tr>
+            //                 <td>{$row['course_name']}</td>
+            //                 <td>{$row['year']}</td>
+            //                 <td>{$row['question_name']}</td>
+            //                 <td>
+            //                     <a download='{$row['question_name']}' href='../moderator/sets/{$row['question_name']}' class='download'>Download</a>
+            //                 </td>
+            //             </tr>";
+            //             }
+            //         }
+            //     }
+            // }
             ?>
         </tbody>
     </table>

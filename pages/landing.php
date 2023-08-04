@@ -16,7 +16,7 @@
 		if(isset($_SESSION['username'])){
 			// header("Location: login.php");
 			
-			if($_SESSION['role_name']="User"){
+			if($_SESSION['role_name']="Student"){
 				include('../include/headerLogout.php');
 				include('../include/nav.php');
 			}
